@@ -1,40 +1,40 @@
 function displayQuiz() {
     const questions = [
         {
-            question: "You've been mysteriously invited to an unfamiliar realm known as Fruitville, accessible only within your dreams. The invitation expires tonight.",
-            choices: ["I don't know, seems risky", "Sounds fun, let's go on an adventure"],
+            question: "You’re just starting on maple and you need to decide on a class to main! Do you...",
+            choices: ["pick something that looks cool!", "look at a tier list on youtube"],
             weights: [
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
                 {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
             ]
         },
         {
-            question: "You drift into a deep slumber after a long day. All of a sudden, the sweet scent of fruits start to fill the air.",
-            choices: ["Where is the smell coming from?", "Am I in Fruitville"],
+            question: "Your fren wants to bring someone you barely know into your ckalos pt.. What will you say?",
+            choices: ["sure new friend!", "hell no my meso/drops"],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
             ]
         },
         {
-            question: "You open your eyes and see that you’re in Fruitville. It’s a sunny morning in Fruitville and fruits are getting ready to start their day. An apple approaches you...",
-            choices: ["This is crazy, I’m dreaming for sure!", "I wonder if there will be any new fruits"],
+            question: "Its ssf and you hit a 21 eternal in 10b! Do you tap to 22 or focus on your other equips?",
+            choices: ["i’m feeling lucky today", "this is a big dmg increase already and i have gains to make elsewhere"],
             weights: [
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "The apple introduces itself as the Mayor of Fruitville.  “Will you be joining us for the FruitFest at noon? It’s an event meant to welcome newcomers and tourists. And yes, there will be plenty of food!",
-            choices: ["“Of course!”", "“I’ll think about it..”"],
+            question: "Someone in your guild’s discord is flexing their gene badge that they just got after several months of running bm. What do you react with?",
+            choices: ["“pog”", "“it’s always the same ppl hitting when will it be my turn”"],
             weights: [
                 {perceivingScore: +1, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for second choice
             ]
         },
         {
-            question: "As you finish your conversation with the Mayor, you can't help but wonder..",
-            choices: ["What food will there be?", "Do fruits eat fruits?"],
+            question: "You had a busy day today and only have 10 minutes to play before reset. Do you...",
+            choices: ["do symbol dailies - slow and steady wins the race", "do daily bosses - maybe something will drop!"],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for second choice
@@ -49,16 +49,16 @@ function displayQuiz() {
             ]
         },
         {
-            question:"As you stroll along,  your stomach starts to rumble. At that moment, the town clock rings for noon and you decide to head for the FruitFest",
-            choices: ["I’ll make sure to bring some cash for the food stalls", "I can’t wait to explore the culture of Fruitville"],
+            question:"An nx item that you’ve had your eye on has been released in ssbs! How many boxes are you gonna buy?",
+            choices: ["none; nexon doesn’t deserve my money", "a set or two won’t hurt.. Maybe i’ll get lucky"],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
             ]
         },
         {
-            question:"You’ve enjoyed your time at the FruitFest, but your time at Fruitville is coming to an end. How do you want to spend your last few minutes at Fruitville?",
-            choices: ["I need some time alone to process", "I want to socialize and make the most of my visit"],
+            question:"Maple is under maintenance again. What do you do in the meantime?",
+            choices: ["scroll the subreddit", "play other games"],
             weights: [
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
@@ -73,32 +73,32 @@ function displayQuiz() {
             ]
         },
         {
-            question:"While you slowly drift back to reality, memories of your time in Fruitville flood your mind.",
-            choices: ["I can’t stop thinking about the details of what happened", "I feel bittersweet and reminisce about my experience"],
+            question:"Which map would you prefer to afk in?",
+            choices: ["c1 henesys", "a quiet, scenic hidden map"],
             weights: [
                 {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"You awaken from your nap on the couch and see that it’s almost time for dinner. Just then, you get a message from a friend asking you to join them for dinner.",
-            choices: ["Let’s go! I need to tell a friend about my dream", "Have dinner at home and relax instead"],
+            question:"your class just lost -20% fd in the most recent balance patch.. will you",
+            choices: ["switch to a stronger class that just got 30% fd", "stick with your class and pray to chang soup it gets buffed"],
             weights: [
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"The next day you hear a ring at your door, your FruitCard has arrived with a letter that says I’m welcome to visit again.",
-            choices: ["I’m already ready to visit again!", "I’ll think about visiting again"],
+            question:"your mule gets a pitch drop. you think..",
+            choices: ["yay a pitch", "why couldn’t it be my main"],
             weights: [
                 {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "Processing your FruitCard...",
-            choices: ["Collect my Fruitcard!"],
+            question: "Processing your class...",
+            choices: ["View my class!"],
             weights: [
                 {extrovertScore: 0, introvertScore: 0 }, // laceholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     backButton.addEventListener('click', function() {
         // Redirect to the home page or perform any other action you want
-        window.location.href = 'https://gudetea.github.io/FruitCard-Odyssey/'; // Replace 'home.html' with the actual URL of your home page
+        window.location.href = 'https://alkaruarts.github.io/FruitCard-Odyssey/'; // Replace 'home.html' with the actual URL of your home page
     });
 });
 
@@ -353,3 +353,4 @@ function navigateToHomePage() {
     document.getElementById('home').style.display = 'block';
     document.getElementById('quiz-page').style.display = 'none';
 }
+
